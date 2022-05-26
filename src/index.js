@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./style/App.css";
 import { CommentDetail } from "./CommentDetail";
 import { faker } from "@faker-js/faker";
 import { ApprovalCard } from "./ApprovalCard";
@@ -7,6 +8,11 @@ import { ApprovalCard } from "./ApprovalCard";
 const App = () => {
     return (
         <div className="ui container comments">
+            <ApprovalCard>
+                <h4>Warning</h4>
+                <div>Are you sure you want to do this?</div>
+            </ApprovalCard>
+
             <ApprovalCard>
                 <CommentDetail
                     image={faker.image.avatar()}
